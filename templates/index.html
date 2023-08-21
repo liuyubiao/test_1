@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>商品识别</title>
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="static/css/mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/deal.js"></script>
+<br/><br/>
+
+<h1>商品信息抽取</h1>
+<hr />
+<div>
+    <br/>品类编码：<br/><br/>
+    <select id="classify_code">
+        <option value="101">101-水果</option>
+        <option value="102">102-蔬菜</option>
+        <option value="103">103-蛋类</option>
+        <option value="104">104-生肉</option>
+        <option value="106">106-水产品</option>
+        <option value="112">112-黄油蜂蜜</option>
+        <option value="114">114-口香糖</option>
+        <option value="117">117-营养粉</option>
+        <option value="121">121-香肠</option>
+        <option value="125">125-膨化食品</option>
+        <option value="126">126-海苔</option>
+        <option value="127">127-沙琪玛烤芙条</option>
+        <option value="128">128-酱油</option>
+        <option value="129">129-果冻布丁(嗜喱)</option>
+        <option value="130">130-食醋</option>
+        <option value="131">131-中式酱</option>
+        <option value="133">133-面包</option>
+        <option value="134">134-蛋糕</option>
+        <option value="137">137-方便食品</option>
+        <option value="139">139-饼干</option>
+        <option value="159">159-牛奶</option>
+        <option value="299">299-白酒</option>
+    </select>
+    <br />
+    <br/>商品编码：<br/><br/>
+    <input id="product_name" type="text" value="">
+</div>
+<div id="mybox"></div>
+<br/>上传进度：<br/><br/>
+<div class="progress" id="ocr_progress">
+    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" id="ocr_progress_bar"
+         style="width: 0%;">
+        <span class="sr-only">0% Complete</span>
+    </div>
+</div>
+<input type="button" value="提交" id="upload_button">
+
+<div id="ocr_show_tips" class="div-hidden"><h2>正在解析上传的图像,请稍后。。。。。</h2></div>
+
+<hr />
+<div class="result-show div-hidden" id="ocr_result_show">
+    <h1>结果展示</h1>
+    <div class="result-show-list" id="ocr_result_list">
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>商品识别展示</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="shortcut icon" href="../static/images/ictr.ico">
+		<link rel="stylesheet" href="../static/css/index.css">
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="ai-module-demo ai-module-section js-module-section" linknav="true" feedback="true">
+			<div class="ai-module-header">
+				商品品类覆盖说明
+			</div>
+			<div class="ai-module-demo-container">
+				<div class="tech-recognition">
+					<div class="ai-container">
+						<div class="tech-recognition-content">
+							<div class="ai-layout-a-des">
+								说明: 当前的商品品类涉及43个品类，101-水果 、102-蔬菜 、103-蛋类 、104-生肉 、106-水产品 、112-黄油蜂蜜 、114-口香糖 、117-营养粉 、121-香肠 、125-膨化食品 、126-海苔 、127-沙琪玛烤芙条 、128-酱油 、129-果冻布丁(嗜喱) 、130-食醋 、131-中式酱 、133-面包 、134-蛋糕 、139-饼干 、138-中式点心、148-冰淇淋 、149-速冻食品 、159-牛奶 、189-食用植物油 、191-面粉、 217-鸡尾酒 、218-葡萄酒、223-固体茶类、230-碳酸饮料、232-果汁饮料、235-包装饮用水、295-啤酒、299-白酒 、315-洗发水洗发膏 、316-护发素 、323-香水 、342-杀虫驱蚊剂、429-卫生巾、507-香辛料、510-果干 、821-婴儿纸尿裤、827-婴儿食品  等43个商品品类
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ai-module-demo ai-module-section js-module-section" linknav="true" feedback="true">
+			<div class="ai-module-header">
+				商品品类测试结果说明
+			</div>
+			<div class="ai-module-demo-container">
+				<div class="tech-recognition">
+					<div class="ai-container">
+						<div class="tech-recognition-content">
+							<div id="show_test_result" class="ai-layout-a-des">
+								<table id="result" class="table table-bordered text-center" style="display: none;">
+<!--									<caption>检测结果展示</caption>-->
+									<thead>
+									<tr>
+										<th class="col-md-1 text-center">品类编码</th>
+										<th class="col-md-7 text-center">品类名称</th>
+										<th class="col-md-1 text-center">测试数量</th>
+										<th class="col-md-1 text-center">品类准确率</th>
+									</tr>
+									</thead>
+									<tbody id="resultList">
+									</tbody>
+									<tfoot>
+									</tfoot>
+								</table>
+								<a id="open_close_table" class="control-show" href="javascript:void(0)">结果展开</a>
+								<a href="../static/file/43品类测试详情.xlsx">43品类测试详情</a> |
+								<a href="../static/file/43品类难点示例.xlsx">43品类难点示例</a> |
+								<a href="../static/file/品类执行规范.xlsx">品类执行规范</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ai-module-demo ai-module-section js-module-section" linknav="true" feedback="true">
+			<div class="ai-module-header">
+				功能演示
+			</div>
+			<div class="ai-module-demo-container">
+				<div class="tech-recognition">
+					<div class="ai-container">
+						<div class="tech-recognition-content">
+							<div class="tech-recognition-scan" style="display: none;"></div>
+							<div class="tech-img-content">
+								<div class="tech-canvas-container">
+									<div class="demo-loading" style="display: none;">
+										<div class="demo-loading-img"></div>
+										<div class="demo-loading-text">图片解析中…</div>
+									</div>
+									<div class="demo-data-error-msg" style="display: none;">
+										<img src="//aip.bdstatic.com/portal-pc-node/dist/1654594847638/images/demo/err.png" alt="" class="error-img">
+										<div class="error-text"></div>
+									</div>
+									<div class="image-input">
+										<div class="image-input-container">
+											<select id="classify_code" class="image-url">
+												<option value="101">101-水果</option>
+												<option value="102">102-蔬菜</option>
+												<option value="103">103-蛋类</option>
+												<option value="104">104-生肉</option>
+												<option value="106">106-水产品</option>
+												<option value="112">112-黄油蜂蜜</option>
+												<option value="114">114-口香糖</option>
+												<option value="117">117-营养粉</option>
+												<option value="121">121-香肠</option>
+												<option value="125">125-膨化食品</option>
+												<option value="126" selected>126-海苔</option>
+												<option value="127">127-沙琪玛烤芙条</option>
+												<option value="128">128-酱油</option>
+												<option value="129">129-果冻布丁(嗜喱)</option>
+												<option value="130">130-食醋</option>
+												<option value="131">131-中式酱</option>
+												<option value="133">133-面包</option>
+												<option value="134">134-蛋糕</option>
+<!--												<option value="137">137-方便食品</option>-->
+												<option value="138">138-中式点心</option>
+												<option value="139">139-饼干</option>
+												<option value="159">159-牛奶</option>
+												<option value="160">160-肉类零食</option>
+												<option value="161">161-肉干肉脯肉脆</option>
+												<option value="162">162-海鲜零食</option>
+												<option value="148">148-冰淇淋</option>
+												<option value="149">149-速冻食品</option>
+												<option value="189">189-食用植物油</option>
+												<option value="191">191-面粉</option>
+												<option value="194">194-糖果</option>
+												<option value="196">196-保健滋补品</option>
+												<option value="217">217-鸡尾酒/洋酒/果酒/露酒</option>
+												<option value="218">218-葡萄酒</option>
+												<option value="223">223-固体茶类</option>
+												<option value="230">230-碳酸饮料</option>
+												<option value="232">232-果汁饮料</option>
+												<option value="235">235-包装饮用水</option>
+												<option value="295">295-啤酒</option>
+												<option value="299">299-白酒</option>
+												<option value="315">315-洗发水洗发膏</option>
+												<option value="316">316-护发素</option>
+												<option value="323">323-香水</option>
+												<option value="325">325-护肤品</option>
+												<option value="326">326-面部清洁品</option>
+												<option value="327">327-化妆品</option>
+												<option value="328">328-纸巾卫生纸</option>
+												<option value="342">342-杀虫驱蚊剂</option>
+												<option value="429">429-卫生巾</option>
+												<option value="492">492-保鲜膜袋</option>
+												<option value="507">507-香辛料</option>
+												<option value="510">510-果干</option>
+												<option value="821">821-婴儿纸尿裤</option>
+												<option value="827">827-婴儿食品</option>
+											</select>
+											<label id="upload_label" class="image-local">
+												<input id="file" type="file" accept="image/png, image/bmp, image/jpg, image/jpeg" multiple="multiple" class="image-local-input">
+												本地上传
+											</label>
+										</div>
+										<div class="image-notice">此处仅供功能展示，图片类型支持PNG、JPG、JPEG、BMP，大小不超过2M。该接口实际能力的图片格式及大小要求以接口文档为准</div>
+									</div>
+									<canvas id="image_canvas" class="demo-canvas-centerlize" width="1680" height="1048" style="transform: translate(-50%, -50%) scale(0.5);"></canvas>
+								</div>
+								<div id="image_list" class="image-select">
+								</div>
+							</div>
+							<div class="demo-json">
+								<div class="demo-collapse">
+									<div class="demo-collapse-item">
+										<div class="demo-collapse-item-title demo-json-title">
+											识别结果
+										</div>
+										<div class="demo-collapse-item-cnt" style="height: 600px; opacity: 1;">
+											<ul id="show_result" class="result-item">
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/bootstrap.min.js"></script>
+		<script src="../static/js/test.js"></script>
+	</body>
+</html>

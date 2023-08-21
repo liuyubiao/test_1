@@ -1,0 +1,164 @@
+h3 {
+    text-align: center;
+}
+
+.submit-box {
+    margin: 50px;
+    text-align: center;
+}
+
+.upload-box {
+    height: 200px;
+}
+
+.show-box {
+    display: none;
+}
+
+.src-video-box {
+    height: 550px;
+    display: none;
+}
+
+.video-box {
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.show-detail-box {
+    margin: 20px;
+}
+
+.head-box {
+    height: 50px;
+    line-height: 50px;
+}
+
+.show-image img {
+    width: 300px;
+}
+
+.div-hide {
+    display: none;
+}
+
+.show-title, .dtect-image {
+    text-align: center;
+}
+
+.text-content {
+    border: ridge;
+}
+
+.search-text-box {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+/* clear float */
+.copyright p {
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.copyright {
+    padding: 5em 0em 0em;
+}
+
+.copyright p a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.image-content {
+    height: 600px;
+    overflow-y: auto;
+}
+
+.document-type {
+    margin: 20px;
+}
+
+label {
+    margin: 20px;
+}
+
+.content-text-box {
+    margin: 0 20% 0 20%;
+}
+
+.item-info h3 {
+    text-align: left;
+}
+
+.item-text-box {
+    border: 1px dashed #000
+}
+
+.div-hidden {
+    display: none;
+}
+
+.sample-show {
+    text-align: center;
+}
+
+.show-sample-list {
+    overflow-y: scroll;
+    max-height: 500px;
+    text-align: left;
+}
+
+.show-sample-list img {
+    max-width: 200px;
+    margin: 20px;
+}
+
+/************识别展示部分***************/
+.result-show {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.result-item .row {
+    margin-right: 0px;
+}
+
+.result-item {
+    max-height: 500px;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.result-item image {
+    max-width: 500px;
+    margin: 10px;
+}
+
+.file-name {
+    text-align: left;
+    font-size: 20px;
+    color: #a2a2a2;
+    margin-left: 90px;
+}
+
+.ocr-show {
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 30px;
+}
+
+.my-textarea {
+    width: 100%;
+}
+
+.upload-item img {
+    width: 500px;
+}
+
+
